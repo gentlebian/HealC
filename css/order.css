@@ -1,0 +1,295 @@
+/**
+ * Create by kirika 2016.3.22 for healc
+ * style for itemlist
+ **/
+.banner {
+  height: 500px;
+  background-color: #eee;
+}
+.tab-group {
+  width: 400px;
+  height: 60px;
+  margin: 40px auto;
+  border-radius: 5px;
+  border: 1px #999999 solid;
+}
+.tab-group .tab {
+  display: block;
+  float: left;
+  height: 100%;
+  width: 50%;
+  text-align: center;
+  line-height: 60px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.tab-group .tab:first-of-type {
+  border-right: 1px #999999 solid;
+}
+.healclist:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+.healcitem {
+  float: left;
+  width: 50%;
+  padding: 0 30px;
+  margin-bottom: 50px;
+}
+.healcitem .img {
+  display: block;
+  width: 100%;
+  height: 335px;
+  background-color: #eee;
+}
+.healcitem .title {
+  font-size: 33px;
+  font-weight: bold;
+  margin: 20px 0 15px;
+}
+.healcitem .option li {
+  height: 40px;
+  line-height: 40px;
+  margin-top: 20px;
+  font-size: 25px;
+}
+.healcitem .option .label {
+  display: inline-block;
+  margin-right: 5px;
+}
+.healcitem .option .price {
+  padding: 0 5px;
+  font-size: 33px;
+}
+.healcitem .option .radio-group,
+.healcitem .option .numbox {
+  display: inline-block;
+}
+.healcitem .option .plus,
+.healcitem .option .minus {
+  display: inline-block;
+  width: 40px;
+  text-align: center;
+  border: 1px #999999 solid;
+  cursor: pointer;
+}
+.healcitem .option .num {
+  width: 100px;
+  text-align: right;
+  border-top: 1px #999999 solid;
+  border-bottom: 1px #999999 solid;
+}
+.healcitem .option .radio {
+  display: inline-block;
+  border: 1px #999999 solid;
+  padding: 0 25px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.healcitem .option .size {
+  height: 35px;
+  line-height: 35px;
+  font-size: 20px;
+  vertical-align: bottom;
+}
+.healcitem .option .size .radio {
+  height: 35px;
+  line-height: 35px;
+}
+.healcitem .btn-group {
+  margin-top: 20px;
+}
+.healcitem .btn-group > span {
+  display: inline-block;
+  width: 200px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 4px;
+  border: 1px #999999 solid;
+  margin-right: 5px;
+  font-size: 25px;
+  cursor: pointer;
+}
+.left {
+  width: 50%;
+  float: left;
+  padding-top: 60px;
+}
+.left:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+.left .detailimg {
+  display: block;
+  width: 100%;
+  height: 390px;
+}
+.left .tab-group {
+  width: 300px;
+  height: 35px;
+  line-height: 35px;
+  margin: 25px auto;
+}
+.left .tab-group .tab {
+  line-height: 35px;
+  font-size: 17px;
+}
+.left .describe {
+  padding: 0 50px;
+}
+.left .describe li {
+  position: relative;
+  width: 100%;
+  padding: 30px 30px 30px 190px;
+  border-bottom: 1px #999999 solid;
+  min-height: 210px;
+}
+.left .describe li img {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  left: 10px;
+  top: 30px;
+}
+.left .describe li p {
+  font-size: 18px;
+  line-height: 1.7;
+}
+.right {
+  width: 49%;
+  float: right;
+  padding-top: 60px;
+}
+.right:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+.right .healcitem {
+  float: none;
+  width: 100%;
+}
+.right .healcitem .option li {
+  margin-top: 30px;
+}
+.right .healcitem .sharebox {
+  margin-top: 30px;
+}
+.right .healcitem .sharebox .btn-group {
+  display: inline-block;
+  margin-top: 0;
+}
+.right .healcitem .sharebox .btn-group > span {
+  width: auto;
+  height: 35px;
+  line-height: 35px;
+  padding: 0 15px;
+  font-size: 15px;
+}
+.searchaddr {
+  width: 100%;
+  padding: 70px 0;
+  text-align: center;
+}
+.searchaddr h5 {
+  font-size: 24px;
+  font-weight: bold;
+}
+.searchaddr .searchbox {
+  position: relative;
+  width: 480px;
+  height: 45px;
+  line-height: 45px;
+  margin: 40px auto;
+  border: 1px #999999 solid;
+  border-radius: 5px;
+}
+.searchaddr .searchbox input {
+  height: 30px;
+  line-height: 30px;
+  width: 100%;
+  padding: 0 75px 0 20px;
+  font-size: 20px;
+}
+.searchaddr .searchbox #search {
+  position: absolute;
+  height: 45px;
+  width: 75px;
+  right: 0;
+  top: 0;
+}
+.chartlist {
+  width: 100%;
+  margin-top: 50px;
+}
+.chartlist thead {
+  height: 45px;
+  line-height: 45px;
+  background-color: #eee;
+}
+.chartlist th,
+.chartlist td {
+  border-bottom: 2px #555 solid;
+}
+.chartlist td {
+  position: relative;
+  text-align: center;
+  padding: 15px 0;
+}
+.chartlist td.itemname {
+  width: 360px;
+}
+.chartlist td.itemname .name {
+  display: inline-block;
+  width: 200px;
+  line-height: 1.5;
+  text-align: left;
+}
+.chartlist td .type,
+.chartlist td .size {
+  position: relative;
+  top: -10px;
+  display: block;
+  width: 100%;
+  padding: 0 15px;
+  text-align: center;
+  line-height: 1.5;
+}
+.chartlist td img {
+  display: inline-block;
+  width: 127px;
+  height: 127px;
+  vertical-align: middle;
+  margin-right: 20px;
+}
+.chartlist td .numbox {
+  display: inline-block;
+  vertical-align: middle;
+  height: 35px;
+  line-height: 35px;
+}
+.chartlist td .numbox .plus,
+.chartlist td .numbox .minus {
+  display: inline-block;
+  width: 35px;
+  text-align: center;
+  border: 1px #999999 solid;
+  cursor: pointer;
+}
+.chartlist td .numbox .num {
+  width: 80px;
+  text-align: center;
+  border-top: 1px #999999 solid;
+  border-bottom: 1px #999999 solid;
+}
+.chartlist td .del {
+  display: inline-block;
+  width: 100px;
+  text-align: center;
+}
+.chartlist td .xiaoji {
+  padding: 0 15px;
+}

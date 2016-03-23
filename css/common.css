@@ -1,0 +1,77 @@
+/**
+ * Create by kirika 2016.3.22 for healc
+ * style for header and footer
+ **/
+@media (min-width: 1050px) {
+  .content {
+    width: 1200px;
+    margin: 0 auto;
+  }
+}
+.clearfix {
+  clear: both;
+}
+#header {
+  height: 100px;
+  line-height: 100px;
+  border-bottom: 1px #999 solid;
+}
+#header .left {
+  float: left;
+}
+#header .right {
+  float: right;
+  text-align: right;
+}
+#header .right .nav {
+  display: inline-block;
+}
+#header .right .nav li {
+  display: inline-block;
+  margin: 0 20px;
+}
+#header .right #chart,
+#header .right #user {
+  display: inline-block;
+  width: 45px;
+  margin: 0 15px;
+}
+#footer {
+  height: 400px;
+  padding: 45px 0 50px;
+  background-color: #eee;
+  border-top: 1px #999 solid;
+}
+#footer .list {
+  height: 200px;
+  margin-bottom: 80px;
+}
+#footer .list dl {
+  display: block;
+  float: left;
+  width: 25%;
+  height: 100%;
+  border-right: 1px #ccc solid;
+  padding: 0 50px;
+}
+#footer .list dl:last-of-type {
+  border-right: none;
+}
+#footer .list dl dt {
+  width: 130px;
+  height: 35px;
+  border-bottom: 2px #555 solid;
+  line-height: 30px;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+#footer .list dl dd {
+  line-height: 35px;
+  font-size: 12px;
+  color: #999;
+}
+#footer .copyright {
+  font-size: 12px;
+  text-align: center;
+  color: #999;
+}

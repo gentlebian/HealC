@@ -1,0 +1,300 @@
+/**
+ * Create by kirika 2016.3.22 for healc
+ * style for itemlist
+ **/
+@import "init.less";
+@gray:#999;
+@border: 1px @gray solid;
+
+.banner{
+	height: 500px;
+	background-color: #eee;
+}
+.tab-group{
+	width: 400px;
+	height: 60px;
+	margin: 40px auto;
+	border-radius: 5px;
+	border: @border;
+	.tab{
+		display: block;
+		float: left;
+		height: 100%;
+		width: 50%;
+		text-align: center;
+		line-height: 60px;
+		font-size: 20px;
+		cursor: pointer;
+		&:first-of-type{
+			border-right: @border;
+		}
+	}
+}
+.healclist{
+	&:after{
+		content: " ";
+		display: block;
+		clear: both;
+	}
+}
+	.healcitem{
+		float: left;
+		width: 50%;
+		padding: 0 30px;
+		margin-bottom: 50px;
+		.img{
+			display: block;
+			width: 100%;
+			height: 335px;
+			background-color: #eee;
+		}
+		.title{
+			font-size: 33px;
+			font-weight: bold;
+			margin: 20px 0 15px;
+		}
+		.option{
+			li{
+				height: 40px;
+				line-height: 40px;
+				margin-top: 20px;
+				font-size: 25px;
+			}
+			.label{
+				display: inline-block;
+				margin-right: 5px;
+			}
+			.price{
+				padding: 0 5px;
+				font-size: 33px;
+			}
+			.radio-group,.numbox{
+				display: inline-block;
+			}
+			.plus,.minus{
+				display: inline-block;
+				width: 40px;
+				text-align: center;
+				border: @border;
+				cursor: pointer;
+			}
+			.num{
+				width: 100px;
+				text-align: right;
+				border-top: @border;
+				border-bottom: @border;
+			}
+			.radio{
+				display: inline-block;
+				border: @border;
+				padding: 0 25px;
+				margin-right: 10px;
+				cursor: pointer;
+			}
+			.size{
+				height: 35px;
+				line-height: 35px;
+				font-size: 20px;
+				vertical-align: bottom;
+				.radio{
+					height: 35px;
+					line-height: 35px;
+				}
+			}
+		}
+		.btn-group{
+			margin-top: 20px;
+			&>span{
+				display: inline-block;
+				width: 200px;
+				height: 50px;
+				line-height: 50px;
+				text-align: center;
+				border-radius: 4px;
+				border: @border;
+				margin-right: 5px;
+				font-size: 25px;
+				cursor: pointer;
+			}
+		}
+	}
+.left{
+	width: 50%;
+	float: left;
+	padding-top: 60px;
+	&:after{
+		content: " ";
+		display: block;
+		clear: both;
+	}
+	.detailimg{
+		display: block;
+		width: 100%;
+		height: 390px;
+	}
+	.tab-group{
+		width: 300px;
+		height: 35px;
+		line-height: 35px;
+		margin: 25px auto;
+		.tab{
+			line-height: 35px;
+			font-size: 17px;
+		}
+	}
+	.describe{
+		padding: 0 50px;
+		li{
+			position: relative;
+			width: 100%;
+			padding: 30px 30px 30px 190px;
+			border-bottom: @border;
+			min-height: 210px;
+			img{
+				position: absolute;
+				width: 150px;
+				height: 150px;
+				left: 10px;
+				top: 30px;
+			}
+			p{
+				font-size: 18px;
+				line-height: 1.7;
+			}
+		}
+	}
+}
+.right{
+	width: 49%;
+	float: right;
+	padding-top: 60px;
+	&:after{
+		content: " ";
+		display: block;
+		clear: both;
+	}
+	.healcitem{
+		float: none;
+		width: 100%;
+		.option{
+			li{
+				margin-top: 30px;
+			}
+		}
+		.sharebox{
+			margin-top: 30px;
+		.btn-group{
+			display: inline-block;
+			margin-top: 0;
+			&>span{
+				width: auto;
+				height: 35px;
+				line-height: 35px;
+				padding: 0 15px;
+				font-size: 15px;
+			}
+		}
+		}
+	}
+}
+.searchaddr{
+	width: 100%;
+	padding: 70px 0;
+	text-align: center;
+	h5{
+		font-size: 24px;
+		font-weight: bold;
+	}
+	.searchbox{
+		position: relative;
+		width: 480px;
+		height: 45px;
+		line-height: 45px;
+		margin: 40px auto;
+		border: @border;
+		border-radius: 5px;
+		input{
+			height: 30px;
+			line-height: 30px;
+			width: 100%;
+			padding: 0 75px 0 20px;
+			font-size: 20px;
+		}
+		#search{
+			position: absolute;
+			height: 45px;
+			width: 75px;
+			right: 0;
+			top: 0;
+		}
+	}
+}
+.chartlist{
+	width: 100%;
+	margin-top: 50px;
+	thead{
+		height: 45px;
+		line-height: 45px;
+		background-color: #eee;
+	}
+	th,td{
+		border-bottom: 2px #555 solid;
+	}
+	td{
+		position: relative;
+		text-align: center;
+		padding: 15px 0;
+		&.itemname{
+			width: 360px;
+			.name{
+				display: inline-block;
+				width: 200px;
+				line-height: 1.5;
+				text-align: left;
+			}
+		}
+		.type,.size{
+			position: relative;
+			top: -10px;
+			display: block;
+			width: 100%;
+			padding: 0 15px;
+			text-align: center;
+			line-height: 1.5;
+		}
+		img{
+			display: inline-block;
+			width: 127px;
+			height: 127px;
+			vertical-align: middle;
+			margin-right: 20px;
+		}
+		.numbox{
+			display: inline-block;
+			vertical-align: middle;
+			height: 35px;
+			line-height: 35px;
+			.plus,.minus{
+				display: inline-block;
+				width: 35px;
+				text-align: center;
+				border: @border;
+				cursor: pointer;
+			}
+			.num{
+				width: 80px;
+				text-align: center;
+				border-top: @border;
+				border-bottom: @border;
+			}
+		}
+		.del{
+			display: inline-block;
+			width: 100px;
+			text-align: center;
+		}
+		.xiaoji{
+			padding: 0 15px;
+		}
+	}
+}

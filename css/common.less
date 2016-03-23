@@ -1,0 +1,79 @@
+/**
+ * Create by kirika 2016.3.22 for healc
+ * style for header and footer
+ **/
+@import "init.less";
+
+@media (min-width:1050px){
+	.content{
+		width: 1200px;
+		margin: 0 auto;
+	}
+}
+.clearfix{
+	clear: both;
+}
+#header{
+	height: 100px;
+	line-height: 100px;
+	border-bottom: 1px #999 solid;
+	.left{
+		float: left;
+	}
+	.right{
+		float: right;
+		text-align: right;
+		.nav{
+			display: inline-block;
+			li{
+				display: inline-block;
+				margin: 0 20px;
+			}
+		}
+		#chart,#user{
+			display: inline-block;
+			width: 45px;
+			margin: 0 15px;
+		}
+	}
+}
+
+#footer{
+	height: 400px;
+	padding: 45px 0 50px;
+	background-color: #eee;
+	border-top: 1px #999 solid;
+	.list{
+		height: 200px;
+		margin-bottom: 80px;
+		dl{
+			display: block;
+			float: left;
+			width: 25%;
+			height: 100%;
+			border-right: 1px #ccc solid;
+			padding: 0 50px;
+			&:last-of-type{
+				border-right: none;
+			}
+			dt{
+				width: 130px;
+				height: 35px;
+				border-bottom: 2px #555 solid;
+				line-height: 30px;
+				font-size: 14px;
+				margin-bottom: 5px;
+			}
+			dd{
+				line-height: 35px;
+				font-size: 12px;
+				color: #999;
+			}
+		}
+	}
+	.copyright{
+		font-size: 12px;
+		text-align: center;
+		color: #999;
+	}
+}

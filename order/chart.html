@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>page</title>
+
+	<link rel="stylesheet" type="text/css" href="../css/reset.css" /> 
+	<link rel="stylesheet" type="text/css" href="../css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../css/order.css" /> 
+
+</head>
+<body>
+	<header id='header'></header>
+	<div class="content">
+		<table class="chartlist">
+			<thead>
+				<tr>
+					<th> </th>
+					<th>产品</th>
+					<th>规格</th>
+					<th>数量</th>
+					<th>小计</th>
+					<th>操作</th>
+				</tr>
+			</thead>
+			<tbody  valign="middle">
+				<tr>
+					<td><input type='checkbox'></input></td>
+					<td class="itemname">
+						<img src=""><span class="name">产品名称产品名称</span>
+					</td>
+					<td>
+						<span class="type">增肌版</span><span class="size">大份</span>
+					</td>
+					<td>
+						<div class="numbox" onselectstart="return false;">
+							<span class="minus">-</span><input class="num" type="number" min="1"></input><span class="plus">+</span>
+						</div>
+					</td>
+					<td><span class="xiaoji">100.00</span></td>
+					<td><a href="#" class="del">删除</a></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<footer id="footer"></footer>
+
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+
+</body>
+</html>
