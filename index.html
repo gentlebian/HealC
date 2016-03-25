@@ -8,28 +8,60 @@
 
 	<link rel="stylesheet" type="text/css" href="css/reset.css" /> 
 	<link rel="stylesheet" type="text/css" href="css/common.css" /> 
+	<link rel="stylesheet" type="text/css" href="css/show.css" /> 
 
 </head>
 <body>
 	<header id='header'>
 		<div class="content">
 			<div class="left">
-				<img src="" class="logo">
+				<img src="img/logo.png" class="logo">
 			</div>
 			<div class="right">
 			<ul class="nav">
-				<li><a href="#">首页</a></li>
-				<li><a href="#">HealC订餐</a></li>
-				<li><a href="#">如何使用</a></li>
-				<li><a href="#">品牌故事</a></li>
+				<li><a href="index.html">首页</a></li>
+				<li><a href="order/list.html">HealC订餐</a></li>
+				<li><a href="howto.html">如何使用</a></li>
+				<li><a href="brand.html">品牌故事</a></li>
 			</ul>
-			<a href="#" id="chart"></a>
+			<a href="order/chart.html" id="chart">0</a>
 			<a href="#" id="user"></a>
 			</div>
 		</div>
 	</header>
+	<div class="datu">
+		<img class="bg" src="img/bg.png">
+		<div class="content">
+			<div class="loginbox">
+				<a href="#" class="register">注册</a>
+				<a href="#" class="login">已有帐号？点击登录</a>
+			</div>
+		</div>
+	</div>
+	<div class="pxm">
+		<dl>
+			<dt>
+				<span><a href="#">选择HealCPump</a></span>
+				<span><a href="#">选择HealCPMeal</a></span>
+			</dt>
+			<dd>
+				<img src="img/cxc.png">
+			</dd>
+		</dl>
+	</div>
+	<div class="datu">
+		<img class="bg" src="img/bg.png">
+		<div class="content">
+		</div>
+	</div>
 	<div class="content">
-		
+		<div class="searchaddr">
+			<h5>配送范围查询</h5>
+			<div class="searchbox">
+				<input placeholder="请输入您的地址"></input>
+				<span id="search">se</span>
+			</div>
+		</div>
 	</div>
 
 	<footer id='footer'>
@@ -54,8 +86,8 @@
 			</dl>
 			<dl>
 				<dt>关注我们</dt>
-				<dd><a href="#">微信</a></dd>
-				<dd><a href="#">微博</a></dd>
+				<dd><a href="#"><img src="img/weibo.png"></a></dd>
+				<dd><a href="#"><img src="img/weixin.png"></a></dd>
 			</dl>
 			</div>
 			<p class="copyright">@2016 HealC All Rights Reserved 沪ICP备11052248号-4</p>

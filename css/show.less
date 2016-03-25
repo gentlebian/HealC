@@ -1,0 +1,82 @@
+/**
+ * Create by kirika 2016.3.24 for healc
+ * style for index,howto
+ **/
+@import "init.less";
+@gray:#999;
+@border: 1px @gray solid;
+
+.loginbox{
+	position: absolute;
+	bottom: 75px;
+	width: 100%;
+	text-align: center;
+	.register{
+		display: block;
+		width: 200px;
+		height: 50px;
+		line-height: 50px;
+		margin: 0 auto;
+		background-color: #ccc;
+		border-radius: 5px;
+		border: @border;
+	}
+	.login{
+		display: inline-block;
+		margin-top: 20px;
+		color: #333;
+	}
+}
+.pxm{
+	dt{
+		height: 60px;
+		line-height: 60px;
+		border-bottom: @border;
+		text-align: center;
+		span{
+			display: inline-block;
+			width: 33%;
+		}
+	}
+	dd{
+		padding: 40px 0;
+		text-align: center;
+		img{
+			width: 66%;
+		}
+	}
+}
+.container{
+	width: 100%;
+	max-width: 980px;
+	margin: 60px auto 170px;
+	&:after{
+		display: block;
+		content: " ";
+		clear: both;
+	}
+}
+.qalist{
+	width: 25%;
+	float: left;
+	border: @border;
+	border-bottom: none;
+	li{
+		padding: 10px;
+		line-height: 1.5;
+		border-bottom: @border;
+	}
+}
+.qa{
+	width: 69%;
+	float: right;
+	dt{
+		font-size: 30px;
+		padding-bottom: 15px;
+		border-bottom: @border;
+	}
+	dd{
+		padding-top: 15px;
+		line-height: 1.7;
+	}
+}

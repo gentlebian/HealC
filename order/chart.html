@@ -14,36 +14,41 @@
 <body>
 	<header id='header'></header>
 	<div class="content">
-		<table class="chartlist">
-			<thead>
-				<tr>
-					<th> </th>
-					<th>产品</th>
-					<th>规格</th>
-					<th>数量</th>
-					<th>小计</th>
-					<th>操作</th>
-				</tr>
-			</thead>
-			<tbody  valign="middle">
-				<tr>
-					<td><input type='checkbox'></input></td>
-					<td class="itemname">
-						<img src=""><span class="name">产品名称产品名称</span>
-					</td>
-					<td>
-						<span class="type">增肌版</span><span class="size">大份</span>
-					</td>
-					<td>
-						<div class="numbox" onselectstart="return false;">
-							<span class="minus">-</span><input class="num" type="number" min="1"></input><span class="plus">+</span>
-						</div>
-					</td>
-					<td><span class="xiaoji">100.00</span></td>
-					<td><a href="#" class="del">删除</a></td>
-				</tr>
-			</tbody>
-		</table>
+		<div class="chartlist">
+			<div class="thead">
+				<div> </div><div>
+				产品</div><div>
+				规格</div><div>
+				数量</div><div>
+				小计</div><div>
+				操作</div>
+			</div>
+			<div class="tbody">
+				<div>
+					<input type='checkbox'></input>
+				</div><div class="itemname">
+					<img src=""><span class="name">产品名称产品名称</span>
+				</div><div>
+					<span class="type">增肌版</span><span class="size">大份</span>
+				</div><div>
+					<div class="numbox" onselectstart="return false;">
+						<span class="minus">-</span><input class="num" type="number" min="1"></input><span class="plus">+</span>
+					</div>
+				</div><div>
+					<span class="xiaoji">100.00</span>
+				</div><div>
+					<a href="#" class="del">删除</a>
+				</div>
+			</div>
+		</div>
+		<div class="selectall">
+			<input type="checkbox" id="selectall"></input>
+			<label for="selectall">全选</label>
+		</div>
+		<div class="sumbox">
+			<p>总价(不含运费): <span class="price">￥300.00</span></p>
+			<a href="order.html" id="balance">去结算</a>
+		</div>
 	</div>
 	<footer id="footer"></footer>
 

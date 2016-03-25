@@ -1,14 +1,15 @@
 /**
- * Create by kirika 2016.3.22 for healc
- * style for itemlist
+ * Create by kirika 2016.3.23 for healc
+ * style for itemlist, detail, chart and order
  **/
 @import "init.less";
 @gray:#999;
 @border: 1px @gray solid;
 
-.banner{
-	height: 500px;
-	background-color: #eee;
+.datu{
+	.bg{
+		max-height: 500px;
+	}
 }
 .tab-group{
 	width: 400px;
@@ -45,7 +46,6 @@
 		.img{
 			display: block;
 			width: 100%;
-			height: 335px;
 			background-color: #eee;
 		}
 		.title{
@@ -55,14 +55,17 @@
 		}
 		.option{
 			li{
+				position: relative;
 				height: 40px;
 				line-height: 40px;
 				margin-top: 20px;
 				font-size: 25px;
+				padding-left: 60px;
 			}
 			.label{
-				display: inline-block;
-				margin-right: 5px;
+				position: absolute;
+				top: 0;
+				left: 0;
 			}
 			.price{
 				padding: 0 5px;
@@ -90,6 +93,9 @@
 				padding: 0 25px;
 				margin-right: 10px;
 				cursor: pointer;
+				&:last-of-type{
+					margin-right: 0;
+				}
 			}
 			.size{
 				height: 35px;
@@ -106,18 +112,22 @@
 			margin-top: 20px;
 			&>span{
 				display: inline-block;
-				width: 200px;
+				width: 48%;
+				max-width: 200px;
 				height: 50px;
 				line-height: 50px;
 				text-align: center;
 				border-radius: 4px;
 				border: @border;
-				margin-right: 5px;
+				margin-right: 1%;
 				font-size: 25px;
 				cursor: pointer;
 			}
 		}
 	}
+
+
+
 .left{
 	width: 50%;
 	float: left;
@@ -130,7 +140,6 @@
 	.detailimg{
 		display: block;
 		width: 100%;
-		height: 390px;
 	}
 	.tab-group{
 		width: 300px;
@@ -143,17 +152,16 @@
 		}
 	}
 	.describe{
-		padding: 0 50px;
+		padding: 0 8%;
 		li{
 			position: relative;
 			width: 100%;
-			padding: 30px 30px 30px 190px;
+			padding: 30px 6% 30px 40%;
 			border-bottom: @border;
 			min-height: 210px;
 			img{
 				position: absolute;
-				width: 150px;
-				height: 150px;
+				width: 31%;
 				left: 10px;
 				top: 30px;
 			}
@@ -164,6 +172,7 @@
 		}
 	}
 }
+
 .right{
 	width: 49%;
 	float: right;
@@ -186,76 +195,102 @@
 		.btn-group{
 			display: inline-block;
 			margin-top: 0;
+			white-space: nowrap;
 			&>span{
 				width: auto;
 				height: 35px;
 				line-height: 35px;
-				padding: 0 15px;
+				padding: 0 4%;
+				margin-right: 5px;
 				font-size: 15px;
 			}
 		}
 		}
 	}
 }
-.searchaddr{
-	width: 100%;
-	padding: 70px 0;
-	text-align: center;
-	h5{
-		font-size: 24px;
-		font-weight: bold;
+@media (max-width:@MinWidth){
+	.datu{
+		display: none;
 	}
-	.searchbox{
-		position: relative;
-		width: 480px;
-		height: 45px;
-		line-height: 45px;
-		margin: 40px auto;
-		border: @border;
-		border-radius: 5px;
-		input{
-			height: 30px;
-			line-height: 30px;
-			width: 100%;
-			padding: 0 75px 0 20px;
-			font-size: 20px;
+	.tab-group{
+		width: 100%;
+	}
+	.healcitem{
+		width: 100%;
+		.img{
 		}
-		#search{
-			position: absolute;
-			height: 45px;
-			width: 75px;
-			right: 0;
-			top: 0;
+		.option{
+			li{
+				font-size: 16px;
+				padding-left: 45px;
+			}
+			.radio{
+				padding: 0 15px;
+			}
+			.num{
+				width: 80px;
+			}
 		}
+		.btn-group > span{
+			font-size: 17px;
+			width: 47%;
+		}
+	}
+	.left{
+		width: 100%;
 	}
 }
+
 .chartlist{
 	width: 100%;
 	margin-top: 50px;
-	thead{
+	margin-bottom: 15px;
+	text-align: center;
+	.thead{
 		height: 45px;
 		line-height: 45px;
 		background-color: #eee;
-	}
-	th,td{
 		border-bottom: 2px #555 solid;
 	}
-	td{
+	.thead>div,.tbody>div{
+		display: inline-block;
+		&:nth-of-type(1){
+			width: 5%;
+		}
+		&:nth-of-type(2){
+			width: 35%;
+		}
+		&:nth-of-type(3){
+			width: 18%;
+		}
+		&:nth-of-type(4){
+			width: 18%;
+		}
+		&:nth-of-type(5){
+			width: 13%;
+		}
+		&:nth-of-type(6){
+			width: 11%;
+		}
+	}
+	.tbody{
 		position: relative;
 		text-align: center;
+		border-bottom: 2px #555 solid;
 		padding: 15px 0;
-		&.itemname{
-			width: 360px;
+		.itemname{
+			position: relative;
 			.name{
 				display: inline-block;
-				width: 200px;
+				width: 59%;
 				line-height: 1.5;
 				text-align: left;
+				vertical-align: middle;
 			}
 		}
 		.type,.size{
 			position: relative;
-			top: -10px;
+			top: 14px;
 			display: block;
 			width: 100%;
 			padding: 0 15px;
@@ -264,25 +299,25 @@
 		}
 		img{
 			display: inline-block;
-			width: 127px;
-			height: 127px;
+			width: 38%;
+			max-width: 127px;
 			vertical-align: middle;
-			margin-right: 20px;
+			margin-right: 3%;
 		}
 		.numbox{
 			display: inline-block;
 			vertical-align: middle;
-			height: 35px;
-			line-height: 35px;
+			height: 30px;
+			line-height: 30px;
 			.plus,.minus{
 				display: inline-block;
-				width: 35px;
+				width: 30px;
 				text-align: center;
 				border: @border;
 				cursor: pointer;
 			}
 			.num{
-				width: 80px;
+				width: 60px;
 				text-align: center;
 				border-top: @border;
 				border-bottom: @border;
@@ -296,5 +331,167 @@
 		.xiaoji{
 			padding: 0 15px;
 		}
+	}
+}
+.orderlist{
+	margin-top: 0;
+	margin-bottom: 40px;
+	.tbody{
+		border-bottom: @border;
+		&>div{
+			&:nth-of-type(1){
+				width: 35%;
+			}
+			&:nth-of-type(2){
+				width: 30%;
+				margin-left: 5%;
+			}
+			&:nth-of-type(3){
+				width: 12%;
+			}
+			&:nth-of-type(4){
+				width: 8%;
+			}
+			&:nth-of-type(5){
+				width: 10%;
+			}
+		}
+		.btn{
+			display: inline-block;
+			height: 60px;
+			line-height: 60px;
+			width: 45%;
+			margin-right: 5%;
+			border: @border;
+		}
+	}
+}
+@media (max-width:@MinWidth){
+	.chartlist{
+
+	}
+}
+.selectall{
+	float: left;
+	margin-left: 2%;
+	input{
+		margin-right: 15px;
+	}
+}
+.sumbox{
+	float: right;
+	margin-right: 35px;
+	text-align: right;
+	margin-bottom: 180px;
+	.price{
+		font-size: 30px;
+	}
+	#balance{
+		display: inline-block;
+		width: 180px;
+		height: 60px;
+		line-height: 60px;
+		margin-top: 30px;
+		text-align: center;
+		border: @border;
+		font-size: 25px;
+	}
+}
+h4.title{
+	position: relative;
+	font-size: 23px;
+	font-weight: normal;
+	line-height: 2;
+	border-bottom: 2px #555 solid;
+	margin-top: 40px;
+	a{
+		position: absolute;
+		right: 3px;
+		bottom: 5px;
+		display: block;
+		float: right;
+		font-size: 15px;
+	}
+}
+.addrlist{
+	margin-top: 10px;
+	line-height: 2;
+	li>span{
+		margin-right: 5px;
+	}
+	li.addbtn{
+		color: #aaa;
+		cursor: pointer;
+	}
+}
+.payinfo{
+	position: relative;
+	width: 50%;
+	float: left;
+	padding-left: 130px;
+	line-height: 50px;
+	&>div{
+		margin-bottom: 30px;
+	}
+	.label{
+		position: absolute;
+		left: 0;
+	}
+	.select{
+		position: relative;
+		width: 60%;
+		height: 50px;
+		border: @border;
+		padding: 0 10px;
+		select{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			-webkit-appearance: none;
+			opacity: 0;
+		}
+	}
+	textarea{
+		width: 100%;
+		height: 147px;
+		line-height: 2;
+	}
+	.btn-group{
+		.btn{
+			display: inline-block;
+			height: 50px;
+			padding: 0 5%;
+			border: @border;
+		}
+	}
+}
+.submitbox{
+	float: right;
+	width: 40%;
+	border: @border;
+	padding: 15px 30px;
+	margin-bottom: 120px;
+	li{
+		line-height: 50px;
+		.label,.acount{
+			display: inline-block;
+			width: 49%;
+		}
+		.acount{
+			text-align: right;
+		}
+	}
+	.submit{
+		display: block;
+		width: 200px;
+		height: 50px;
+		margin: 5px auto 0;
+		line-height: 50px;
+		text-align: center;
+		border: 2px #999 solid;
+		border-radius: 3px;
+		font-size: 20px;
 	}
 }

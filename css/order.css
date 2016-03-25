@@ -1,10 +1,9 @@
 /**
- * Create by kirika 2016.3.22 for healc
- * style for itemlist
+ * Create by kirika 2016.3.23 for healc
+ * style for itemlist, detail, chart and order
  **/
-.banner {
-  height: 500px;
-  background-color: #eee;
+.datu .bg {
+  max-height: 500px;
 }
 .tab-group {
   width: 400px;
@@ -40,7 +39,6 @@
 .healcitem .img {
   display: block;
   width: 100%;
-  height: 335px;
   background-color: #eee;
 }
 .healcitem .title {
@@ -49,14 +47,17 @@
   margin: 20px 0 15px;
 }
 .healcitem .option li {
+  position: relative;
   height: 40px;
   line-height: 40px;
   margin-top: 20px;
   font-size: 25px;
+  padding-left: 60px;
 }
 .healcitem .option .label {
-  display: inline-block;
-  margin-right: 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .healcitem .option .price {
   padding: 0 5px;
@@ -87,6 +88,9 @@
   margin-right: 10px;
   cursor: pointer;
 }
+.healcitem .option .radio:last-of-type {
+  margin-right: 0;
+}
 .healcitem .option .size {
   height: 35px;
   line-height: 35px;
@@ -102,13 +106,14 @@
 }
 .healcitem .btn-group > span {
   display: inline-block;
-  width: 200px;
+  width: 48%;
+  max-width: 200px;
   height: 50px;
   line-height: 50px;
   text-align: center;
   border-radius: 4px;
   border: 1px #999999 solid;
-  margin-right: 5px;
+  margin-right: 1%;
   font-size: 25px;
   cursor: pointer;
 }
@@ -125,7 +130,6 @@
 .left .detailimg {
   display: block;
   width: 100%;
-  height: 390px;
 }
 .left .tab-group {
   width: 300px;
@@ -138,19 +142,18 @@
   font-size: 17px;
 }
 .left .describe {
-  padding: 0 50px;
+  padding: 0 8%;
 }
 .left .describe li {
   position: relative;
   width: 100%;
-  padding: 30px 30px 30px 190px;
+  padding: 30px 6% 30px 40%;
   border-bottom: 1px #999999 solid;
   min-height: 210px;
 }
 .left .describe li img {
   position: absolute;
-  width: 150px;
-  height: 150px;
+  width: 31%;
   left: 10px;
   top: 30px;
 }
@@ -181,115 +184,296 @@
 .right .healcitem .sharebox .btn-group {
   display: inline-block;
   margin-top: 0;
+  white-space: nowrap;
 }
 .right .healcitem .sharebox .btn-group > span {
   width: auto;
   height: 35px;
   line-height: 35px;
-  padding: 0 15px;
+  padding: 0 4%;
+  margin-right: 5px;
   font-size: 15px;
 }
-.searchaddr {
-  width: 100%;
-  padding: 70px 0;
-  text-align: center;
-}
-.searchaddr h5 {
-  font-size: 24px;
-  font-weight: bold;
-}
-.searchaddr .searchbox {
-  position: relative;
-  width: 480px;
-  height: 45px;
-  line-height: 45px;
-  margin: 40px auto;
-  border: 1px #999999 solid;
-  border-radius: 5px;
-}
-.searchaddr .searchbox input {
-  height: 30px;
-  line-height: 30px;
-  width: 100%;
-  padding: 0 75px 0 20px;
-  font-size: 20px;
-}
-.searchaddr .searchbox #search {
-  position: absolute;
-  height: 45px;
-  width: 75px;
-  right: 0;
-  top: 0;
+@media (max-width: 760px) {
+  .datu {
+    display: none;
+  }
+  .tab-group {
+    width: 100%;
+  }
+  .healcitem {
+    width: 100%;
+  }
+  .healcitem .option li {
+    font-size: 16px;
+    padding-left: 45px;
+  }
+  .healcitem .option .radio {
+    padding: 0 15px;
+  }
+  .healcitem .option .num {
+    width: 80px;
+  }
+  .healcitem .btn-group > span {
+    font-size: 17px;
+    width: 47%;
+  }
+  .left {
+    width: 100%;
+  }
 }
 .chartlist {
   width: 100%;
   margin-top: 50px;
+  margin-bottom: 15px;
+  text-align: center;
 }
-.chartlist thead {
+.chartlist .thead {
   height: 45px;
   line-height: 45px;
   background-color: #eee;
-}
-.chartlist th,
-.chartlist td {
   border-bottom: 2px #555 solid;
 }
-.chartlist td {
+.chartlist .thead > div,
+.chartlist .tbody > div {
+  display: inline-block;
+}
+.chartlist .thead > div:nth-of-type(1),
+.chartlist .tbody > div:nth-of-type(1) {
+  width: 5%;
+}
+.chartlist .thead > div:nth-of-type(2),
+.chartlist .tbody > div:nth-of-type(2) {
+  width: 35%;
+}
+.chartlist .thead > div:nth-of-type(3),
+.chartlist .tbody > div:nth-of-type(3) {
+  width: 18%;
+}
+.chartlist .thead > div:nth-of-type(4),
+.chartlist .tbody > div:nth-of-type(4) {
+  width: 18%;
+}
+.chartlist .thead > div:nth-of-type(5),
+.chartlist .tbody > div:nth-of-type(5) {
+  width: 13%;
+}
+.chartlist .thead > div:nth-of-type(6),
+.chartlist .tbody > div:nth-of-type(6) {
+  width: 11%;
+}
+.chartlist .tbody {
   position: relative;
   text-align: center;
+  border-bottom: 2px #555 solid;
   padding: 15px 0;
 }
-.chartlist td.itemname {
-  width: 360px;
+.chartlist .tbody .itemname {
+  position: relative;
 }
-.chartlist td.itemname .name {
+.chartlist .tbody .itemname .name {
   display: inline-block;
-  width: 200px;
+  width: 59%;
   line-height: 1.5;
   text-align: left;
+  vertical-align: middle;
 }
-.chartlist td .type,
-.chartlist td .size {
+.chartlist .tbody .type,
+.chartlist .tbody .size {
   position: relative;
-  top: -10px;
+  top: 14px;
   display: block;
   width: 100%;
   padding: 0 15px;
   text-align: center;
   line-height: 1.5;
 }
-.chartlist td img {
+.chartlist .tbody img {
   display: inline-block;
-  width: 127px;
-  height: 127px;
+  width: 38%;
+  max-width: 127px;
   vertical-align: middle;
-  margin-right: 20px;
+  margin-right: 3%;
 }
-.chartlist td .numbox {
+.chartlist .tbody .numbox {
   display: inline-block;
   vertical-align: middle;
-  height: 35px;
-  line-height: 35px;
+  height: 30px;
+  line-height: 30px;
 }
-.chartlist td .numbox .plus,
-.chartlist td .numbox .minus {
+.chartlist .tbody .numbox .plus,
+.chartlist .tbody .numbox .minus {
   display: inline-block;
-  width: 35px;
+  width: 30px;
   text-align: center;
   border: 1px #999999 solid;
   cursor: pointer;
 }
-.chartlist td .numbox .num {
-  width: 80px;
+.chartlist .tbody .numbox .num {
+  width: 60px;
   text-align: center;
   border-top: 1px #999999 solid;
   border-bottom: 1px #999999 solid;
 }
-.chartlist td .del {
+.chartlist .tbody .del {
   display: inline-block;
   width: 100px;
   text-align: center;
 }
-.chartlist td .xiaoji {
+.chartlist .tbody .xiaoji {
   padding: 0 15px;
+}
+.orderlist {
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+.orderlist .tbody {
+  border-bottom: 1px #999999 solid;
+}
+.orderlist .tbody > div:nth-of-type(1) {
+  width: 35%;
+}
+.orderlist .tbody > div:nth-of-type(2) {
+  width: 30%;
+  margin-left: 5%;
+}
+.orderlist .tbody > div:nth-of-type(3) {
+  width: 12%;
+}
+.orderlist .tbody > div:nth-of-type(4) {
+  width: 8%;
+}
+.orderlist .tbody > div:nth-of-type(5) {
+  width: 10%;
+}
+.orderlist .tbody .btn {
+  display: inline-block;
+  height: 60px;
+  line-height: 60px;
+  width: 45%;
+  margin-right: 5%;
+  border: 1px #999999 solid;
+}
+.selectall {
+  float: left;
+  margin-left: 2%;
+}
+.selectall input {
+  margin-right: 15px;
+}
+.sumbox {
+  float: right;
+  margin-right: 35px;
+  text-align: right;
+  margin-bottom: 180px;
+}
+.sumbox .price {
+  font-size: 30px;
+}
+.sumbox #balance {
+  display: inline-block;
+  width: 180px;
+  height: 60px;
+  line-height: 60px;
+  margin-top: 30px;
+  text-align: center;
+  border: 1px #999999 solid;
+  font-size: 25px;
+}
+h4.title {
+  position: relative;
+  font-size: 23px;
+  font-weight: normal;
+  line-height: 2;
+  border-bottom: 2px #555 solid;
+  margin-top: 40px;
+}
+h4.title a {
+  position: absolute;
+  right: 3px;
+  bottom: 5px;
+  display: block;
+  float: right;
+  font-size: 15px;
+}
+.addrlist {
+  margin-top: 10px;
+  line-height: 2;
+}
+.addrlist li > span {
+  margin-right: 5px;
+}
+.addrlist li.addbtn {
+  color: #aaa;
+  cursor: pointer;
+}
+.payinfo {
+  position: relative;
+  width: 50%;
+  float: left;
+  padding-left: 130px;
+  line-height: 50px;
+}
+.payinfo > div {
+  margin-bottom: 30px;
+}
+.payinfo .label {
+  position: absolute;
+  left: 0;
+}
+.payinfo .select {
+  position: relative;
+  width: 60%;
+  height: 50px;
+  border: 1px #999999 solid;
+  padding: 0 10px;
+}
+.payinfo .select select {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-appearance: none;
+  opacity: 0;
+}
+.payinfo textarea {
+  width: 100%;
+  height: 147px;
+  line-height: 2;
+}
+.payinfo .btn-group .btn {
+  display: inline-block;
+  height: 50px;
+  padding: 0 5%;
+  border: 1px #999999 solid;
+}
+.submitbox {
+  float: right;
+  width: 40%;
+  border: 1px #999999 solid;
+  padding: 15px 30px;
+  margin-bottom: 120px;
+}
+.submitbox li {
+  line-height: 50px;
+}
+.submitbox li .label,
+.submitbox li .acount {
+  display: inline-block;
+  width: 49%;
+}
+.submitbox li .acount {
+  text-align: right;
+}
+.submitbox .submit {
+  display: block;
+  width: 200px;
+  height: 50px;
+  margin: 5px auto 0;
+  line-height: 50px;
+  text-align: center;
+  border: 2px #999 solid;
+  border-radius: 3px;
+  font-size: 20px;
 }
