@@ -1,0 +1,119 @@
+/*
+ *
+ * Created by Haibo 2016/3/23 for HealC
+ * Style for login
+ *
+ */
+// paraments
+@logoW: 120px;
+@logoH: 90px;
+@gridWidth: 280px;
+@gridHeight: 50px;
+@forgetPwdW: 280px;
+@forgetPwdH: 40px;
+@thirdLogW: 280px;
+@thirdLogH: 40px;
+@thirdLogoW: 40px;
+@thirdLogoH: 40px;
+
+// container grid
+.containerGrid {
+
+	display: block;
+	float: left;
+	position: relative;
+	width: 50%;
+	height: 600px;
+	background-color: transparent;
+	text-align: center;
+	align-items: center;
+	padding: 100px;
+	overflow: auto;
+	border-right: solid 1px;
+	&:last-of-type{
+		border-right: none;
+	}
+
+	// input and button grid
+	.gridl {
+		//position: relative;
+		margin: auto;
+		.generate(@gridWidth, @gridHeight);
+		right: 0;
+		margin-top: 20px;
+		border: solid 1px;
+		
+	}
+
+	.gridr:extend(.containerGrid .gridl) {
+		left: 0;
+	}
+
+	input {
+		width: 100%;
+		height: 100%;
+		padding-left: 10%;
+	}
+
+	button {
+		width: 100%;
+		height: 100%;
+		font-size: 20px;
+		font-family: "微软雅黑";
+		text-decoration: none;
+		display: inline-block;
+		background-color: white;
+		border: 0;
+	}
+
+}
+
+#left:extend(.containerGrid) {
+	text-align: right;
+	//align-items: right;
+
+}
+// framework
+.generate(@width, @height) {
+	width: @width;
+	height: @height;
+}
+// HealC logo
+.logo {
+	.generate(@logoW, @logoH);
+}
+
+
+// forget password
+.fpwd {
+	position: relative;
+	.generate(@forgetPwdW, @forgetPwdH);
+	padding-top: 10px;
+	padding-bottom: 10px;
+	vertical-align: center;
+	text-align: left;
+	margin: auto;
+}
+// third party account login
+.thirdlgin {
+	position: relative;
+	.generate(@thirdLogW, @thirdLogH);
+	padding-top: 10px;
+	padding-bottom: 10px;
+	vertical-align: center;
+	text-align: center;
+	margin: auto;
+	//left: 20%;
+	p {
+		padding-bottom: 20px;
+	}
+	
+}
+// third party logo
+.thirdlgo {
+	position: relative;
+	.generate(@thirdLogoW, @thirdLogoH);
+	margin: auto;
+	//left: 20%;
+	
+}
