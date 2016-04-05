@@ -44,14 +44,6 @@
   float: right;
   text-align: right;
 }
-#header .right .nav {
-  display: inline-block;
-  margin-right: 15px;
-}
-#header .right .nav li {
-  display: inline-block;
-  margin: 0 20px;
-}
 #header .right #chart,
 #header .right #user {
   display: inline-block;
@@ -72,6 +64,28 @@
 }
 #header .right #user {
   background-image: url('../img/ren.png');
+}
+#header .nav {
+  display: inline-block;
+  float: right;
+  margin-right: 15px;
+}
+#header .nav li {
+  display: inline-block;
+  margin: 0 20px;
+}
+@media (max-width: 760px) {
+  #header .nav {
+    display: block;
+    width: 100%;
+    margin-right: 0;
+    text-align: center;
+  }
+  #header .nav li {
+    padding: 0 1%;
+    margin: 0;
+    text-align: center;
+  }
 }
 #footer {
   height: 400px;
@@ -176,9 +190,23 @@
   width: 75px;
   right: 0;
   top: 0;
+  background-image: url('../img/search.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  cursor: pointer;
 }
 @media (max-width: 760px) {
   .searchaddr .searchbox {
     width: 100%;
   }
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none !important;
+  margin: 0;
+}
+.btn,
+.radio {
+  cursor: pointer;
 }

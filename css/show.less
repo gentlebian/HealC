@@ -47,6 +47,7 @@
 	}
 }
 .container{
+	position: relative;
 	width: 100%;
 	max-width: 980px;
 	margin: 60px auto 170px;
@@ -54,6 +55,11 @@
 		display: block;
 		content: " ";
 		clear: both;
+	}
+	h4{
+		text-align: center;
+		font-size: 30px;
+		margin-bottom: 25px;
 	}
 }
 .qalist{
@@ -70,6 +76,13 @@
 .qa{
 	width: 69%;
 	float: right;
+	dl{
+		display: none;
+		margin-bottom: 20px;
+		&.current{
+			display: block;
+		}
+	}
 	dt{
 		font-size: 30px;
 		padding-bottom: 15px;
@@ -78,5 +91,17 @@
 	dd{
 		padding-top: 15px;
 		line-height: 1.7;
+	}
+}
+@media (max-width:@MinWidth){
+	.qalist{
+		width: 100%;
+		background-color: #fff;
+	}
+	.qa{
+		width: 100%;
+		dl{
+			display: block;
+		}
 	}
 }
