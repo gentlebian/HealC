@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
 
 	<title>my Information</title>
+	<script src="http://apps.bdimg.com/libs/jquery/1.7.2/jquery.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/reset.css" /> 
 	<link rel="stylesheet" type="text/css" href="css/common.css" />
 	<link rel="stylesheet" type="text/css" href="css/myInfo.css" />
@@ -30,7 +31,16 @@
 		</div>
 	</header>
 	<div class="content">
-		
+		<div class="navigator">
+			<table>
+				<tr><td id="basicInfo">基本信息</td></tr>
+				<tr><td id="myOrder">我的订单</td></tr>
+				<tr><td id="addrMag">地址管理</td></tr>
+				<tr><td id="myRedpk">我的红包</td></tr>
+			</table>
+		</div>
+		<iframe id="infoPanel" src="./basicInfo.html"></iframe>
+		<div class="clearfix"></div>
 	</div>
 	<footer id='footer'>
 		<div class="content">
@@ -61,5 +71,23 @@
 			<p class="copyright">@2016 HealC All Rights Reserved 沪ICP备11052248号-4</p>
 		</div>
 	</footer>
+	
+	<script type="text/javascript">
+		$(document).ready(function(){
+			//$("#infoPanel").load("http://"+"./basicinfo.html");
+			$("#basicInfo").click(function(){
+				$("#infoPanel").attr("src", "./basicInfo.html");
+			});
+			$("#myOrder").click(function(){
+				$("#infoPanel").attr("src", "./myOrder.html");
+			});
+			$("#addrMag").click(function(){
+				$("#infoPanel").attr("src", "./addrMag.html");
+			});
+			$("#myRedpk").click(function(){
+				$("#infoPanel").attr("src", "./myRedpk.html");
+			});
+		});
+	</script>
 </body>
 </html>

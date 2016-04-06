@@ -1,0 +1,45 @@
+/*
+ *
+ * Created By Haibo Bian 2016/03/29
+ * for HealC page
+ * myInfo.html
+ */
+.navigator {
+  float: left;
+  position: relative;
+  width: 45%;
+  height: 500px;
+  item-align: right;
+  border: 0;
+}
+.navigator table {
+  position: absolute;
+  right: 0;
+  width: 100px;
+  border: solid 1px;
+  margin-top: 40px;
+  margin-right: 5%;
+  text-align: center;
+}
+.navigator table tr {
+  width: 100px;
+  height: 25px;
+  text-align: center;
+  vertical-align: center;
+  font-family: "黑体";
+}
+.navigator table tr td {
+  height: 35px;
+  border: solid 1px;
+  vertical-align: middle;
+}
+.navigator table td:hover {
+  background-color: #eeeeee;
+}
+iframe {
+  float: left;
+  position: relative;
+  width: 55%;
+  height: 500px;
+  overflow: hidden;
+}
