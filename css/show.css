@@ -41,6 +41,7 @@
   width: 66%;
 }
 .container {
+  position: relative;
   width: 100%;
   max-width: 980px;
   margin: 60px auto 170px;
@@ -49,6 +50,11 @@
   display: block;
   content: " ";
   clear: both;
+}
+.container h4 {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 25px;
 }
 .qalist {
   width: 25%;
@@ -65,6 +71,13 @@
   width: 69%;
   float: right;
 }
+.qa dl {
+  display: none;
+  margin-bottom: 20px;
+}
+.qa dl.current {
+  display: block;
+}
 .qa dt {
   font-size: 30px;
   padding-bottom: 15px;
@@ -73,4 +86,16 @@
 .qa dd {
   padding-top: 15px;
   line-height: 1.7;
+}
+@media (max-width: 760px) {
+  .qalist {
+    width: 100%;
+    background-color: #fff;
+  }
+  .qa {
+    width: 100%;
+  }
+  .qa dl {
+    display: block;
+  }
 }
